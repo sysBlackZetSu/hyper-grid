@@ -24,6 +24,21 @@ export { createSelectionEngine } from './selection';
 // Plugins
 export { createPluginManager } from './plugins';
 
+// Streaming / Real-time
+export {
+  createStreamBuffer,
+  createDiffEngine,
+  createStreamScheduler,
+  createPrioritySystem,
+  createRealtimeEngine,
+} from './streaming';
+
+// DOM Patch Renderer
+export { createDOMPatchRenderer } from './dom-patch';
+
+// Position Engine
+export { createPositionEngine } from './position';
+
 // Benchmarking
 export {
   createFPSMonitor,
@@ -78,3 +93,21 @@ export type {
   RenderMetrics,
   BenchmarkResult,
 } from './types';
+
+// Streaming types
+export type {
+  StreamBuffer,
+  DrainResult,
+  DiffEngine,
+  Patch,
+  PatchType,
+  StreamScheduler,
+  PrioritySystem,
+  PriorityResult,
+  RealtimeEngine,
+  RealtimeEngineOptions,
+  FrameStats,
+} from './streaming';
+
+export type { DOMPatchRenderer } from './dom-patch';
+export type { PositionEngine } from './position';

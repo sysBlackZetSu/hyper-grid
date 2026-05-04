@@ -1,0 +1,59 @@
+{
+  "name": "@hyper-grid/core",
+  "version": "0.1.0",
+  "description": "Next-generation React Data Grid engine with extreme performance optimization",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/esm/react/index.js",
+      "require": "./dist/cjs/react/index.js",
+      "types": "./dist/types/react/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && npm run build:types",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "echo 'Tests placeholder'",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "react",
+    "data-grid",
+    "table",
+    "virtualization",
+    "performance",
+    "datagrid"
+  ],
+  "author": "sysBlackZetSu",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.0"
+  }
+}
